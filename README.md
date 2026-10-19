@@ -4,7 +4,7 @@ Source code for **https://www.hankenes.org**, the website of Hanken Entrepreneur
 
 ## Read this first
 
-**Everything merged into `main` goes live on www.hankenes.org within about a minute.** There is no staging site in between. `main` is protected: a change can only get there through a pull request that another person has approved and that Vercel has built successfully (see [Making a change](#making-a-change)).
+**Everything merged into `main` goes live on www.hankenes.org within about a minute.** There is no staging site in between. `main` is protected: a change can only get there through a pull request, and only after Vercel has built it successfully (see [Making a change](#making-a-change)).
 
 There is one more safety net: if the build fails, Vercel keeps the previous version online. A build that succeeds but looks broken **does** go live.
 
@@ -38,11 +38,11 @@ npm run build   # production build; must finish without errors before you push
 4. Run `npm run build`. If it shows errors, fix them before continuing.
 5. Commit, push the branch and open a pull request on GitHub.
 6. Vercel builds the branch automatically and reports the result as a check on the pull request. A red cross means the build failed, so do not merge. (The preview link requires a Vercel login, so if you cannot open it, rely on your local check.)
-7. Another collaborator has to approve the pull request before GitHub lets you merge it. After the merge the change is live about a minute later. Open www.hankenes.org and check it.
+7. When the Vercel check is green, merge the pull request yourself. If you are unsure about a change, ask another person to look at it first. The change is live about a minute after the merge. Open www.hankenes.org and check it.
 
 ## Undoing a bad change
 
-- **Developers:** open the merged pull request on GitHub and press **Revert**. This creates a new pull request that undoes the change; once it is approved and merged, the previous version goes live. From the command line: run `git revert <commit>` on a new branch and open a pull request.
+- **Developers:** open the merged pull request on GitHub and press **Revert**. This creates a new pull request that undoes the change; once it is merged, the previous version goes live. From the command line: run `git revert <commit>` on a new branch and open a pull request.
 - **Board (Vercel):** Deployments → the previous production deployment → **Instant Rollback**. On the free plan you can only roll back one step. **After a rollback, new pushes to `main` stop going live** until someone presses **Undo Rollback** in Vercel. Prefer the Git revert when you can.
 
 ## Where things are
