@@ -1,0 +1,54 @@
+.nav3d-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.4s cubic-bezier(0.2,0.7,0.2,1);
+  transform-origin: center center;
+  will-change: transform;
+}
+.nav3d-link:hover,
+.nav3d-link:focus-visible { transform: scale(1.12); }
+.nav3d-img {
+  --haze: rgba(254, 58, 8, 0.50);
+  --haze-soft: rgba(255, 96, 30, 0.30);
+  display: block;
+  height: 30px;            /* default nav word height; overridden per element */
+  width: auto;
+  transform: perspective(700px) rotateY(0deg);
+  animation: none;   /* idle motion (light sweep + micro-rotation) is baked into the APNGs */
+  backface-visibility: hidden;
+  transform-origin: center center;
+  will-change: transform;
+  filter: drop-shadow(0 0 7px var(--haze)) drop-shadow(0 0 18px var(--haze-soft));
+  transition: filter 0.4s cubic-bezier(0.2,0.7,0.2,1);
+}
+.nav3d-link:hover .nav3d-img,
+.nav3d-link:focus-visible .nav3d-img { filter: drop-shadow(0 0 9px var(--haze)) drop-shadow(0 0 24px var(--haze-soft)) brightness(1.06); }
+.nav3d-img--blue-haze { --haze: rgba(86,164,224,0.55); --haze-soft: rgba(48,120,190,0.32); }
+.nav3d-img--logo { height: 128px; animation: none; }  /* APNG self-animates the 3D turntable */
+.nav3d-img--assembly { height: 68px; }
+.nav3d-img--spin { animation: nav3d-spin 0.65s cubic-bezier(.34,.12,.18,1) !important; }
+@keyframes nav3d-sway {
+  0%   { transform: perspective(700px) rotateY(-12deg); }
+  50%  { transform: perspective(700px) rotateY(12deg); }
+  100% { transform: perspective(700px) rotateY(-12deg); }
+}
+@keyframes nav3d-logo-spin360 {
+  from { transform: perspective(700px) rotateY(0deg); }
+  to   { transform: perspective(700px) rotateY(360deg); }
+}
+@keyframes nav3d-spin {
+  0%   { transform: perspective(700px) rotateY(0deg);   filter: drop-shadow(0 0 7px var(--haze)) drop-shadow(0 0 18px var(--haze-soft)) blur(0px); }
+  18%  { filter: drop-shadow(0 0 7px var(--haze)) drop-shadow(0 0 18px var(--haze-soft)) blur(3px); }
+  50%  { transform: perspective(700px) rotateY(540deg); filter: drop-shadow(0 0 7px var(--haze)) drop-shadow(0 0 18px var(--haze-soft)) blur(2.4px); }
+  82%  { filter: drop-shadow(0 0 7px var(--haze)) drop-shadow(0 0 18px var(--haze-soft)) blur(1.4px); }
+  100% { transform: perspective(700px) rotateY(1080deg); filter: drop-shadow(0 0 7px var(--haze)) drop-shadow(0 0 18px var(--haze-soft)) blur(0px); }
+}
+@media (max-width: 768px) {
+  .nav3d-img { height: 22px; }
+  .nav3d-img--logo { height: 72px; }
+  .nav3d-img--assembly { height: 48px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav3d-img, .nav3d-img--spin { animation: none !important; transform: none !important; }
+}

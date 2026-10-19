@@ -1,0 +1,79 @@
+.founders-marquee {
+  background: transparent;
+  padding: 48px 0;
+  margin: 256px 0 -256px;   /* center the bar in the gap between GET IN TOUCH and CONTACT */
+  overflow: hidden;
+}
+
+.founders-marquee__heading {
+  text-align: center;
+  margin: 0 0 28px;
+}
+
+.founders-marquee__viewport {
+  width: 100%;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.founders-marquee__track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: 64px;
+  animation: founders-marquee-scroll 35s linear infinite;
+}
+
+.founders-marquee__viewport:hover .founders-marquee__track {
+  animation-play-state: paused;
+}
+
+.founders-marquee__item {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.founders-marquee__logo {
+  height: 40px;
+  width: auto;
+  max-width: 210px;
+  object-fit: contain;
+  display: block;
+  filter: brightness(0) invert(1);
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.founders-marquee__text {
+  font-family: 'Switzer', sans-serif;
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -0.4px;
+  white-space: nowrap;
+  opacity: 0.55;
+  transition: opacity 0.3s ease;
+}
+
+.founders-marquee__item:hover .founders-marquee__logo,
+.founders-marquee__item:hover .founders-marquee__text {
+  opacity: 1;
+}
+
+@keyframes founders-marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .founders-marquee__track {
+    animation: none;
+  }
+}

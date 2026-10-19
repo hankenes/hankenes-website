@@ -1,0 +1,156 @@
+.assembly-2026 {
+  background: rgb(15, 14, 14);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Below-header region: contains the image bg + main + transparent footer.
+   Image anchored bottom-right with a soft radial mask that fades into the
+   surrounding black at the top, left, and bottom edges for a smooth round
+   transition like the home page gradient finale. */
+.assembly-2026__below-header {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  isolation: isolate;
+  min-height: 75vh;
+}
+
+/* Halo: smooth blue-tinted fade from header black down into the image so the
+   tree/sky vibe of the bg bleeds naturally upward instead of a hard edge. */
+.assembly-2026__below-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  transform: translateZ(0);
+  background:
+    linear-gradient(
+      in oklab to bottom,
+      rgb(15, 14, 14) 0%,
+      rgba(17, 20, 32, 0.88) 18%,
+      rgba(20, 26, 48, 0.55) 42%,
+      rgba(22, 30, 58, 0.22) 68%,
+      transparent 92%
+    ),
+    radial-gradient(
+      in oklab ellipse 70% 90% at 70% 100%,
+      rgba(38, 65, 110, 0.22) 0%,
+      transparent 100%
+    );
+}
+
+.assembly-2026__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: url('/assets/images/PiaMaria.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right bottom;
+  will-change: transform;
+  transform: translateZ(0);
+  animation: assembly-bg-drift 90s ease-in-out infinite;
+  -webkit-mask-image: radial-gradient(
+    ellipse 140% 140% at right bottom,
+    black 40%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    in oklab,
+    ellipse 140% 140% at right bottom,
+    black 40%,
+    transparent 100%
+  );
+}
+
+@keyframes assembly-bg-drift {
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  25%  { transform: translate3d(-4px, 2px, 0) scale(1.008); }
+  50%  { transform: translate3d(-7px, -3px, 0) scale(1.014); }
+  75%  { transform: translate3d(3px, -1px, 0) scale(1.006); }
+  100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .assembly-2026__bg { animation: none; }
+}
+
+.assembly-2026__main {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.assembly-2026__content {
+  padding: 120px 48px 60px;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.assembly-2026__title {
+  font-size: 179px;
+  line-height: 136.04px;
+  letter-spacing: -12.53px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.assembly-2026__teaser {
+  margin-top: 48px;
+  letter-spacing: 0.24px;
+}
+
+/* Footer must sit above the halo overlay so its text remains legible */
+.assembly-2026__below-header .site-footer {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .assembly-2026__below-header {
+    min-height: 80vh;
+  }
+  .assembly-2026__content {
+    padding: 80px 20px 40px;
+  }
+  .assembly-2026__title {
+    font-size: 88px;
+    line-height: 80px;
+    letter-spacing: -4px;
+  }
+  .assembly-2026__bg {
+    -webkit-mask-image: radial-gradient(
+      ellipse 160% 160% at right bottom,
+      black 35%,
+      transparent 100%
+    );
+    mask-image: radial-gradient(
+      ellipse 160% 160% at right bottom,
+      black 35%,
+      transparent 100%
+    );
+  }
+}
+
+@media (max-width: 480px) {
+  .assembly-2026__title {
+    font-size: 64px;
+    line-height: 60px;
+  }
+}
