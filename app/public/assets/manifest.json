@@ -1,0 +1,166 @@
+{
+  "images": [
+    {
+      "original_url": "https://framerusercontent.com/images/DBtYnAuvTDrTIVLZ1qPiuDZCng.png",
+      "local_path": "/assets/images/home-hero-wordmark.png",
+      "page": "/",
+      "role": "Hero wordmark image (HANKEN tree ES)"
+    },
+    {
+      "original_url": "https://framerusercontent.com/images/LLk4iRAJCypfWHMDFhzpmjXNupQ.jpg",
+      "local_path": "/assets/images/home-board.jpg",
+      "page": "/",
+      "role": "Board portrait photo placed next to WHO WE ARE"
+    },
+    {
+      "original_url": "https://framerusercontent.com/images/nyyVG7N6UOz2JLw3yIOumT1BsI.svg",
+      "local_path": "/assets/images/tree-logo.svg",
+      "page": "all",
+      "role": "Tree icon / favicon-style mark"
+    },
+    {
+      "original_url": "https://framerusercontent.com/images/7KyP7Q9E1zsD8pGbIJRv8ZVSR00.png",
+      "local_path": "/assets/images/assembly-hero.png",
+      "page": "/assembly",
+      "role": "Assembly 2025 hero image (orange tree photo)"
+    },
+    {
+      "original_url": "https://framerusercontent.com/images/oXxaNisgYcEZBT5GbKqrAEEbMS0.png",
+      "local_path": "/assets/images/partner-hanken.png",
+      "page": "/assembly",
+      "role": "Hanken School of Economics partner logo"
+    },
+    {
+      "original_url": "https://framerusercontent.com/images/9XYu6W7vGUSguujBegiNu5SyoQs.png",
+      "local_path": "/assets/images/partner-business-lab.png",
+      "page": "/assembly",
+      "role": "Slush partner logo (filename retained for stability; content is Slush wordmark)"
+    },
+    {
+      "original_url": "https://framerusercontent.com/images/nSacX4eRObNs5i12EBNwuUGPll0.png",
+      "local_path": "/assets/images/partner-spark-up.png",
+      "page": "/assembly",
+      "role": "Startup Foundation partner logo (filename retained for stability)"
+    },
+    {
+      "original_url": "https://framerusercontent.com/images/PBzX2l0MGra6wIrWUw5LLvXdV8.jpg",
+      "local_path": "/assets/images/gallery-assembly2025-card.jpg",
+      "page": "/event-gallery, /event-gallery/assembly2025",
+      "role": "Assembly 2025 hero photo (card + detail hero)"
+    },
+    {
+      "original_url": "https://framerusercontent.com/images/NRNIqXL8xJlwbVa1NjZjHX1vA4o.jpg",
+      "local_path": "/assets/images/gallery-kickoff-card.jpg",
+      "page": "/event-gallery, /event-gallery/kick-off",
+      "role": "Kick off 2025 hero photo (card + detail hero)"
+    },
+    {
+      "original_url": "https://framerusercontent.com/images/GDOoD3zLpPuZJMpi1x6wquTiBs.jpg",
+      "local_path": "/assets/images/gallery-slush-sitz-card.jpg",
+      "page": "/event-gallery, /event-gallery/slush-sitz2024",
+      "role": "Slush Sitz 2024 hero photo (card + detail hero)"
+    },
+    {
+      "original_url": "https://framerusercontent.com/images/iSTT9BlO0opd8NPnK6xRrlV98M.jpg",
+      "local_path": "/assets/images/assembly2025-photo-2.jpg",
+      "page": "/event-gallery/assembly2025",
+      "role": "Assembly 2025 gallery photo 2"
+    },
+    {
+      "original_url": "https://framerusercontent.com/images/8M9zblllzluE3I8yFFgBk1CU3o.jpg",
+      "local_path": "/assets/images/assembly2025-photo-3.jpg",
+      "page": "/event-gallery/assembly2025",
+      "role": "Assembly 2025 gallery photo 3 (portrait)"
+    },
+    {
+      "original_url": "https://framerusercontent.com/images/72roxOvE7lMvQO8KUDWOjr9JNk.jpg",
+      "local_path": "/assets/images/assembly2025-photo-4.jpg",
+      "page": "/event-gallery/assembly2025",
+      "role": "Assembly 2025 gallery photo 4"
+    },
+    {
+      "original_url": "https://framerusercontent.com/images/sdlromN1Z5ujrrdhummv5cXC8.jpg",
+      "local_path": "/assets/images/assembly2025-photo-5.jpg",
+      "page": "/event-gallery/assembly2025",
+      "role": "Assembly 2025 gallery photo 5"
+    },
+    {
+      "original_url": "https://framerusercontent.com/images/1bdaE402l8ivgIpNxbZ1PMB6U0.jpg",
+      "local_path": "/assets/images/kickoff-photo-2.jpg",
+      "page": "/event-gallery/kick-off",
+      "role": "Kick off gallery photo 2"
+    },
+    {
+      "original_url": "https://framerusercontent.com/images/Cqgng0pT17opLYAPwkD3OFBE.jpg",
+      "local_path": "/assets/images/kickoff-photo-3.jpg",
+      "page": "/event-gallery/kick-off",
+      "role": "Kick off gallery photo 3"
+    },
+    {
+      "original_url": "https://framerusercontent.com/images/DoZQRvX8hNPEzenTy2XU63i6PLU.jpg",
+      "local_path": "/assets/images/kickoff-photo-4.jpg",
+      "page": "/event-gallery/kick-off",
+      "role": "Kick off gallery photo 4 (portrait)"
+    },
+    {
+      "original_url": "https://framerusercontent.com/images/SZGTTn1ZQYf8o7A3t2ENp5Xz9OI.jpg",
+      "local_path": "/assets/images/kickoff-photo-5.jpg",
+      "page": "/event-gallery/kick-off",
+      "role": "Kick off gallery photo 5 (portrait)"
+    },
+    {
+      "original_url": "https://framerusercontent.com/images/stGtywiz4VbspER4YITBCvpDA.jpg",
+      "local_path": "/assets/images/slush-sitz-photo-2.jpg",
+      "page": "/event-gallery/slush-sitz2024",
+      "role": "Slush Sitz gallery photo 2"
+    },
+    {
+      "original_url": "https://framerusercontent.com/images/cZtmvlXUFZHEJpm1a1n6yuFx19g.jpg",
+      "local_path": "/assets/images/slush-sitz-photo-3.jpg",
+      "page": "/event-gallery/slush-sitz2024",
+      "role": "Slush Sitz gallery photo 3"
+    },
+    {
+      "original_url": "https://framerusercontent.com/images/6KZVofY7Mq4mXANAgx4dMCpbPc.jpg",
+      "local_path": "/assets/images/slush-sitz-photo-4.jpg",
+      "page": "/event-gallery/slush-sitz2024",
+      "role": "Slush Sitz gallery photo 4"
+    },
+    {
+      "original_url": "https://framerusercontent.com/images/5LS4vPiO6v88FJmwVkZGzVxcToU.jpg",
+      "local_path": "/assets/images/slush-sitz-photo-5.jpg",
+      "page": "/event-gallery/slush-sitz2024",
+      "role": "Slush Sitz gallery photo 5"
+    }
+  ],
+  "fonts": [
+    {
+      "original_url": "https://framerusercontent.com/third-party-assets/fontshare/wf/OYB4CXKJQXKTNSLJMTDQOIVUL2V5EL7S/WYO2P7DQVV5RNXGMCUO2HL4RJP4VFUAS/6XPIMU23OJVRY676OG5YVJMWEHWICATX.woff2",
+      "local_path": "/assets/fonts/switzer-500.woff2",
+      "family": "Switzer",
+      "weight": 500,
+      "style": "normal"
+    },
+    {
+      "original_url": "https://framerusercontent.com/third-party-assets/fontshare/wf/HBNTRIISA5MEXGL5WPYI7CV2HIWTDV3Q/YDPDINVT673XLXNSTMLG4JNCZZMVVNPN/Y7SCNZJOT2MW5ADSGOFLDGH4TNL4JCQY.woff2",
+      "local_path": "/assets/fonts/switzer-700.woff2",
+      "family": "Switzer",
+      "weight": 700,
+      "style": "normal"
+    },
+    {
+      "original_url": "https://framerusercontent.com/third-party-assets/fontshare/wf/5SZVFDB7V52TI6ULVC6J3WQZQCIZVDV5/ODYPSTCUDMKSTYIPTV4CLQ7URIK7XYBJ/YS3VPNVO4B3TOJMEXDGFZQ4TLZGGSRZC.woff2",
+      "local_path": "/assets/fonts/switzer-600.woff2",
+      "family": "Switzer",
+      "weight": 600,
+      "style": "normal"
+    },
+    {
+      "original_url": "https://framerusercontent.com/third-party-assets/fontshare/wf/L7ZHBDKNPCJUMFDFCFPHHK4RV7OFYP35/ICIUL5ABL6JESZ73FR7QSQOMYTKCNNMY/LSZ7EF56Q5Y43X3QAZUVAEEKK7C4I7YK.woff2",
+      "local_path": "/assets/fonts/switzer-100.woff2",
+      "family": "Switzer",
+      "weight": 100,
+      "style": "normal"
+    }
+  ]
+}
