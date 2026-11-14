@@ -167,7 +167,7 @@ img, svg {
 .hover-grow {
   display: inline-block;
   transform-origin: center;
-  transition: color 0.4s cubic-bezier(0.2,0.7,0.2,1), transform 0.4s cubic-bezier(0.2,0.7,0.2,1);
+  transition: color 0.18s ease, transform 0.18s ease;
 }
 
 .hover-grow:hover,
@@ -178,7 +178,7 @@ img, svg {
 
 .hover-grow--pill {
   transform-origin: center;
-  transition: background 0.4s cubic-bezier(0.2,0.7,0.2,1), color 0.4s cubic-bezier(0.2,0.7,0.2,1), transform 0.4s cubic-bezier(0.2,0.7,0.2,1);
+  transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
 }
 
 .hover-grow--pill:hover,
