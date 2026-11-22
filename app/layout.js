@@ -1,6 +1,5 @@
 import './globals.css';
 import ScrollToTop from '../components/ScrollToTop';
-import IntroLoader from '../components/IntroLoader';
 
 export const metadata = {
   title: 'HankenES - Hanken Entrepreneurship Society rf',
@@ -36,7 +35,6 @@ export default function RootLayout({ children }) {
         <script dangerouslySetInnerHTML={{ __html: NO_RESTORE }} />
       </head>
       <body>
-        <IntroLoader />
         <ScrollToTop />
         {children}
       </body>

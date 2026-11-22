@@ -1,5 +1,6 @@
-import Header from '../../components/Header';
+import SiteHeader from '../../components/SiteHeader';
 import Footer from '../../components/Footer';
+import PhotoCarousel from '../../components/PhotoCarousel';
 import './Events.css';
 
 export const metadata = { title: 'Events - HankenES' };
@@ -9,11 +10,11 @@ const PAST_EVENTS = [
     id: 'assembly2025',
     title: 'ASSEMBLY 2025',
     year: '2025',
-    body: `ON SEPTEMBER 18TH, HANKEN ENTREPRENEURSHIP SOCIETY HOSTED ASSEMBLY 2025, OUR ANNUAL FLAGSHIP EVENT AT HANKEN SCHOOL OF ECONOMICS. WE WERE PROUD TO WELCOME OVER 250 PARTICIPANTS – STUDENTS, FOUNDERS, AND INVESTORS – WHO CAME TOGETHER FOR AN EVENING OF KEYNOTES, PANELS, AND FIRE ROUNDS ON WHAT IT REALLY TAKES TO BUILD, SCALE, AND SUSTAIN A STARTUP.
+    body: `On September 18th, Hanken Entrepreneurship Society hosted Assembly 2025, our annual flagship event at Hanken School of Economics. We were proud to welcome over 250 participants – students, founders, and investors – who came together for an evening of keynotes, panels, and fire rounds on what it really takes to build, scale, and sustain a startup.
 
-WE ARE TRULY GRATEFUL TO OUR AMAZING SPEAKERS FOR SHARING THEIR INSIGHTS, TO OUR PARTNERS FOR THEIR SUPPORT, AND TO EVERYONE WHO JOINED US FOR MAKING THE NIGHT SO SPECIAL. ASSEMBLY IS ABOUT MORE THAN JUST TALKS – IT'S ABOUT BUILDING CONNECTIONS AND STRENGTHENING OUR ENTREPRENEURIAL COMMUNITY, AND THIS YEAR'S EVENT WAS A TESTAMENT TO THAT.
+We are truly grateful to our amazing speakers for sharing their insights, to our partners for their support, and to everyone who joined us for making the night so special. Assembly is about more than just talks – it's about building connections and strengthening our entrepreneurial community, and this year's event was a testament to that.
 
-THANK YOU ALL FOR BEING PART OF ASSEMBLY 2025.`,
+Thank you all for being part of Assembly 2025.`,
     hero: '/assets/images/gallery-assembly2025-card.jpg',
     gallery: [
       '/assets/images/assembly2025-photo-2.jpg',
@@ -26,9 +27,9 @@ THANK YOU ALL FOR BEING PART OF ASSEMBLY 2025.`,
     id: 'kick-off',
     title: '2025 KICK OFF',
     year: '2025',
-    body: `60+ AMBITIOUS STUDENTS JOINED US AT JACKIE'S BAR IN HELSINKI TO KICK OF THE YEAR OF 2025 AND THE BOARD OF 2025 ALSO GOT INTRODUCED.
+    body: `The year kicked off in the best way possible: 60+ ambitious students gathered at Jackie's Bar in the heart of Helsinki to set the tone for everything to come. It was a night of fresh faces, familiar friends, and big plans for the year ahead. We also took the chance to introduce the 2025 board – the people who'd be steering the community through the months to come.
 
-GOOD FOOD AND EVEN BETTER COMPANY.`,
+Between the great food, the easy conversations, and the buzz of a new year beginning, it was exactly the kind of evening that reminds you why this community is worth showing up for. Good food, even better company, and a year full of promise ahead.`,
     hero: '/assets/images/gallery-kickoff-card.jpg',
     gallery: [
       '/assets/images/kickoff-photo-2.jpg',
@@ -41,7 +42,9 @@ GOOD FOOD AND EVEN BETTER COMPANY.`,
     id: 'slush-sitz2024',
     title: 'SLUSH SITZ 2024',
     year: '2024',
-    body: `150 INTERNATIONAL GUESTS, STUDENTS, FOUNDERS, INVESTORS AND MORE. ALL GATHERED FOR A TRADITIONAL FINNISH STUDENT "SITZ". GREAT FOOD, COMPANY AND DRINKS.`,
+    body: `As Slush brought the world's startup scene to Helsinki, we brought the celebration. 150 international guests – students, founders, investors, and more – gathered for a traditional Finnish student "sitz", a singing dinner where the drinks flow as freely as the conversation. It was a night where borders disappeared and new connections formed over shared songs, shared tables, and shared ambitions.
+
+From first-time visitors discovering Finnish student culture to seasoned founders swapping stories, the energy in the room was electric. Great food, great company, and great drinks – a perfect Slush-week tradition that captured everything our community is about.`,
     hero: '/assets/images/gallery-slush-sitz-card.jpg',
     gallery: [
       '/assets/images/slush-sitz-photo-2.jpg',
@@ -55,10 +58,10 @@ GOOD FOOD AND EVEN BETTER COMPANY.`,
 export default function EventsPage() {
   return (
     <div className="page events">
-      <Header variant="sub" />
+      <SiteHeader />
       <main className="events__main">
-        <h4 className="h-hero events__heading">EVENT CALENDAR:</h4>
-        <p className="small-caps dim events__sub">CURRENT &amp; UPCOMING EVENTS</p>
+        <h4 className="events__heading">EVENT CALENDAR</h4>
+        <p className="events__sub">CURRENT &amp; UPCOMING EVENTS</p>
         <div className="events__calendar">
           <iframe
             src="https://luma.com/embed/calendar/cal-zjsInBg7JqyzFhX/events"
@@ -71,38 +74,21 @@ export default function EventsPage() {
 
         <section className="events__past">
           <header className="events__past-header">
-            <h4 className="h-hero events__past-title">PAST EVENTS</h4>
-            <p className="small-caps dim events__past-sub">
-              OVER THE YEARS WE HAVE DONE SOME AMAZING THINGS
+            <h4 className="events__past-title">PAST EVENTS</h4>
+            <p className="events__past-sub">
+              Every year, our community comes together in ways big and small — from flagship nights that fill a hall with hundreds of founders, investors, and dreamers, to intimate dinners where conversations turn into collaborations. These are the moments that define who we are: the talks that sparked ideas, the people who became partners, and the evenings nobody wanted to end. Here's a look back at some of the events that shaped our journey.
             </p>
           </header>
 
           {PAST_EVENTS.map(ev => (
             <article key={ev.id} className="past-event" id={ev.id}>
-              <h1 className="h-hero past-event__title">{ev.title}</h1>
+              <h1 className="past-event__title">{ev.title}</h1>
 
               <div className="past-event__intro">
-                <p className="text-body past-event__body">{ev.body}</p>
-                <div className="past-event__meta">
-                  <p className="text-body dim">YEAR</p>
-                  <p className="text-body">{ev.year}</p>
-                </div>
+                <p className="past-event__body">{ev.body}</p>
               </div>
 
-              <div className="past-event__hero">
-                <img src={ev.hero} alt={ev.title} />
-              </div>
-
-              <div className="past-event__grid">
-                {ev.gallery.slice(0, 2).map(src => (
-                  <img key={src} src={src} alt="" className="past-event__grid-img" />
-                ))}
-              </div>
-              <div className="past-event__grid">
-                {ev.gallery.slice(2, 4).map(src => (
-                  <img key={src} src={src} alt="" className="past-event__grid-img" />
-                ))}
-              </div>
+              <PhotoCarousel images={[ev.hero, ...ev.gallery]} alt={ev.title} />
             </article>
           ))}
         </section>

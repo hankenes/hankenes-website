@@ -19,7 +19,7 @@
   flex-shrink: 0;
   display: inline-flex;
   align-items: center;
-  transition: transform 0.4s cubic-bezier(0.2,0.7,0.2,1), opacity 0.4s cubic-bezier(0.2,0.7,0.2,1);
+  transition: transform 0.18s ease, opacity 0.18s ease;
 }
 
 .home-header__logo-link:hover,
@@ -67,7 +67,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 64px;
-  align-items: start;
+  align-items: center;
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .home-about__col {
@@ -75,7 +78,22 @@
 }
 
 .home-about__body {
-  margin-top: 48px;
+  margin-top: 28px;
+  font-size: 23px;
+  line-height: 1.6;
+  letter-spacing: normal;
+  text-transform: none;
+  color: var(--dim);
+}
+
+.home-about__body:first-of-type {
+  margin-top: 40px;
+}
+
+.home-about .h-section {
+  font-size: 76px;
+  line-height: 1.05;
+  letter-spacing: -4px;
 }
 
 .home-about__photo-wrap {
@@ -123,50 +141,33 @@
   border-radius: 14px;
 }
 
-/* ----- Grid: WHO WE ARE (left, under WHAT WE DO) + THE BOARD (right, under photo) ----- */
-.home-grid {
+/* ----- WHO WE ARE: centered vertical stack (title → board → stats) ----- */
+.home-who {
   padding: 0 48px;
-  margin-top: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  align-items: end;
-}
-
-.home-grid__left {
-  max-width: 613px;
-  display: flex;
-  flex-direction: column;
-}
-
-.home-grid__right {
-  justify-self: end;
-  width: 100%;
-  max-width: 566px;
+  margin-top: 160px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
-.home-grid__stats {
-  margin-top: 48px;
+.home-who__title {
+  text-align: center;
 }
 
-.home-grid__label {
-  margin-top: 56px;
+.home-who__stats {
+  margin-top: 72px;
+  text-align: center;
 }
 
-.home-grid__email {
-  font-weight: 500;
-}
-
-/* Board: two centered stacks (heading + column), each centered around its heading */
+/* Board: two centered stacks (heading + column) side by side */
 .home-board {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   gap: 80px;
   width: 100%;
+  margin-top: 56px;
 }
 
 .home-board__stack {
@@ -193,6 +194,73 @@
 .home-board__list li {
   font-weight: 500;
   list-style: none;
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+/* BOARD/ROLE headings — a bit bigger than the list items */
+.home-board__heading {
+  font-size: 30px;
+}
+
+/* ----- FOUNDED BY HANKENES ALUMNI — scrolling logo carousel ----- */
+.home-alumni {
+  margin-top: 160px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home-alumni__heading {
+  margin: 0 0 48px;
+  text-align: center;
+}
+.home-alumni__track-wrap {
+  width: 100%;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+}
+.home-alumni__track {
+  display: flex;
+  align-items: center;
+  gap: 96px;
+  width: max-content;
+  padding: 24px 0;
+  line-height: 1.2;
+  animation: alumni-scroll 40s linear infinite;
+}
+.home-alumni__track-wrap:hover .home-alumni__track {
+  animation-play-state: paused;
+}
+.home-alumni__logo {
+  flex-shrink: 0;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  color: rgba(255, 255, 255, 0.78);
+  white-space: nowrap;
+  line-height: 1.4;
+  padding: 6px 0;
+}
+.home-alumni__logo-img {
+  flex-shrink: 0;
+  height: 44px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+/* Mimmit Sijoittaa logo: slightly smaller to soften low-res blur */
+.home-alumni__logo--small {
+  height: 34px;
+}
+@keyframes alumni-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-alumni__track { animation: none; }
 }
 
 /* ----- FINALE: gradient bg covering CTA + socials + footer ----- */
@@ -278,22 +346,35 @@
     margin-top: 80px !important;
     padding: 0 20px !important;
   }
+  .home-about .h-section {
+    font-size: 44px !important;
+    line-height: 1.05 !important;
+    letter-spacing: -1.2px !important;
+  }
+  .home-about__body {
+    font-size: 18px !important;
+  }
   .home-about__photo-wrap {
     max-width: 100% !important;
     justify-self: stretch !important;
   }
   .home-about__photo-glow { inset: -28px !important; filter: blur(36px) !important; }
 
-  .home-grid {
-    grid-template-columns: 1fr !important;
-    gap: 60px !important;
+  .home-who {
     margin-top: 80px !important;
     padding: 0 20px !important;
   }
-  .home-grid__left, .home-grid__right {
-    max-width: 100% !important;
-    justify-self: stretch !important;
+  .home-board {
+    gap: 32px !important;
   }
+  .home-board__list li { font-size: 17px !important; }
+  .home-board__heading { font-size: 24px !important; }
+
+  .home-alumni { margin-top: 80px !important; }
+  .home-alumni__track { gap: 56px !important; }
+  .home-alumni__logo { font-size: 28px !important; }
+  .home-alumni__logo-img { height: 32px !important; }
+  .home-alumni__logo--small { height: 26px !important; }
 
   .home-finale { margin-top: 120px !important; }
   .home-finale__content { padding-top: 60px !important; }
@@ -309,11 +390,12 @@
     margin-top: 56px !important;
     padding: 0 20px !important;
   }
-  .home-socials__link { font-size: 18px !important; }
+  .home-socials__link { font-size: 16px !important; }
 }
 
 @media (max-width: 480px) {
   .home-header__nav-link { font-size: 24px !important; }
   .home-header__nav-link--assembly { font-size: 16px !important; line-height: 14px !important; }
   .home-socials__link { font-size: 16px !important; }
+  .home-board { gap: 20px !important; }
 }

@@ -1,4 +1,4 @@
-import Nav3DLink from './Nav3DLink';
+import Link from 'next/link';
 import './Header.css';
 
 export default function Header({ variant = 'sub' }) {
@@ -6,23 +6,20 @@ export default function Header({ variant = 'sub' }) {
     return <header className="site-header site-header--home" aria-hidden="true" />;
   }
 
-  const base = '/assets/images/nav';
-
   return (
     <header className="site-header site-header--sub">
       <div className="site-header__inner">
-        <Nav3DLink
-          href="/"
-          src={`${base}/logo-red.png`}
-          alt="HankenES"
-          spin={false}
-          className="site-header__logo"
-          imgClassName="nav3d-img--logo"
-        />
+        <Link href="/" className="site-header__logo hover-grow">
+          <img
+            src="/assets/images/hankenes-logo-2026.png"
+            alt="HankenES"
+            className="site-header__logo-img"
+          />
+        </Link>
         <nav className="site-header__nav">
-          <Nav3DLink href="/events" src={`${base}/events-red.png`} alt="Events" />
-          <Nav3DLink href="/#about" src={`${base}/about-red.png`} alt="About" />
-          <Nav3DLink href="/#contact-1" src={`${base}/contact-red.png`} alt="Contact" />
+          <Link href="/events" className="hover-grow">EVENTS</Link>
+          <a href="/#about" className="hover-grow">ABOUT</a>
+          <a href="/#contact-1" className="hover-grow">CONTACT</a>
         </nav>
         <p className="site-header__year">®2026</p>
       </div>
