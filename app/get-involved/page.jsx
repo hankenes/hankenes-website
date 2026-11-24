@@ -52,7 +52,7 @@ export default function GetInvolvedPage() {
             HOW DO I GET <span className="get-involved__title-red">INVOLVED?</span>
           </h4>
           <p className="get-involved__sub">
-            Everyone has something to bring to the table. Whether you want to put your skills to use, pick up new ones, or just be part of a community that backs big ideas — this is where it starts. Explore the ways to get involved below.
+            Everyone has something to bring to the table. Whether you want to put your skills to use, pick up new ones, or just be part of a community that backs big ideas. This is where it starts. Explore the ways to get involved below.
           </p>
           <Reveal delay={0.1}>
             <div className="get-involved__cards">

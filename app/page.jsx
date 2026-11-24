@@ -1,3 +1,4 @@
+
 // CreatedByJohnCedricEsguerra
 import Footer from '../components/Footer';
 import Reveal from '../components/Reveal';
@@ -26,7 +27,7 @@ export default function Home() {
               Since 2010, Hanken Entrepreneurship Society has been the home for bold thinkers at Hanken School of Economics. We're a student-driven non-profit on a mission to support, inspire, and connect the next generation of founders.
             </p>
             <p className="home-about__body dim">
-              Through workshops, talks, company visits, and our flagship events, we turn curiosity into action — giving students the tools, the network, and the courage to build something of their own. From first-time idea to first real venture, we're the community that backs big ideas and the people behind them.
+              Through workshops, talks, company visits, and our flagship events, we turn curiosity into action. We give students the tools, the network, and the courage to build something of their own. From first-time idea to first real venture, we're the community that backs big ideas and the people behind them.
             </p>
           </div>
           <div className="home-about__photo-wrap">
