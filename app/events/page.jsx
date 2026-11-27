@@ -1,11 +1,32 @@
+
 import SiteHeader from '../../components/SiteHeader';
 import Footer from '../../components/Footer';
 import PhotoCarousel from '../../components/PhotoCarousel';
+import Link from 'next/link';
 import './Events.css';
 
 export const metadata = { title: 'Events - HankenES' };
 
 const PAST_EVENTS = [
+  {
+    id: 'assembly2026',
+    title: 'ASSEMBLY 2026',
+    year: '2026',
+    link: '/assembly-2026',
+    body: `On 23 September 2026, Hanken Entrepreneurship Society hosted its annual flagship event, Assembly 2026, at Hanken School of Economics. Under the theme Beyond the Obvious, this year's programme brought together an inspiring lineup of speakers who shared their experiences, challenged perspectives and offered insights from their entrepreneurial journeys.
+
+A big thank you to our speakers, partners and everyone who made Assembly 2026 possible!`,
+    hero: '/assets/images/assembly2026-photo-1.jpg',
+    gallery: [
+      '/assets/images/assembly2026-photo-2.jpg',
+      '/assets/images/assembly2026-photo-5.jpg',
+      '/assets/images/assembly2026-photo-3.jpg',
+      '/assets/images/assembly2026-photo-4.jpg',
+      '/assets/images/assembly2026-photo-6.jpg',
+      '/assets/images/assembly2026-photo-7.jpg',
+      '/assets/images/assembly2026-photo-8.jpg',
+    ],
+  },
   {
     id: 'assembly2025',
     title: 'ASSEMBLY 2025',
@@ -82,7 +103,13 @@ export default function EventsPage() {
 
           {PAST_EVENTS.map(ev => (
             <article key={ev.id} className="past-event" id={ev.id}>
-              <h1 className="past-event__title">{ev.title}</h1>
+              <h1 className="past-event__title">
+                {ev.link ? (
+                  <Link href={ev.link}>{ev.title}</Link>
+                ) : (
+                  ev.title
+                )}
+              </h1>
 
               <div className="past-event__intro">
                 <p className="past-event__body">{ev.body}</p>
