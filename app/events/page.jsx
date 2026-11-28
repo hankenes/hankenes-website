@@ -5,7 +5,9 @@ import PhotoCarousel from '../../components/PhotoCarousel';
 import Link from 'next/link';
 import './Events.css';
 
-export const metadata = { title: 'Events - HankenES' };
+export const metadata = {
+  title: 'Events - HankenES',
+};
 
 const PAST_EVENTS = [
   {
@@ -80,9 +82,11 @@ export default function EventsPage() {
   return (
     <div className="page events">
       <SiteHeader />
+
       <main className="events__main">
         <h4 className="events__heading">EVENT CALENDAR</h4>
         <p className="events__sub">CURRENT &amp; UPCOMING EVENTS</p>
+
         <div className="events__calendar">
           <iframe
             src="https://luma.com/embed/calendar/cal-zjsInBg7JqyzFhX/events"
@@ -96,12 +100,20 @@ export default function EventsPage() {
         <section className="events__past">
           <header className="events__past-header">
             <h4 className="events__past-title">PAST EVENTS</h4>
+
             <p className="events__past-sub">
-              Every year, our community comes together in ways big and small — from flagship nights that fill a hall with hundreds of founders, investors, and dreamers, to intimate dinners where conversations turn into collaborations. These are the moments that define who we are: the talks that sparked ideas, the people who became partners, and the evenings nobody wanted to end. Here's a look back at some of the events that shaped our journey.
+              Every year, our community comes together in ways big and small.
+              We host flagship nights that fill a hall with hundreds of
+              founders, investors and dreamers, as well as intimate dinners
+              where conversations turn into collaborations. These are the
+              moments that define who we are: the talks that sparked ideas,
+              the people who became partners and the evenings nobody wanted
+              to end. Here's a look back at some of the events that shaped
+              our journey.
             </p>
           </header>
 
-          {PAST_EVENTS.map(ev => (
+          {PAST_EVENTS.map((ev) => (
             <article key={ev.id} className="past-event" id={ev.id}>
               <h1 className="past-event__title">
                 {ev.link ? (
@@ -115,11 +127,15 @@ export default function EventsPage() {
                 <p className="past-event__body">{ev.body}</p>
               </div>
 
-              <PhotoCarousel images={[ev.hero, ...ev.gallery]} alt={ev.title} />
+              <PhotoCarousel
+                images={[ev.hero, ...ev.gallery]}
+                alt={ev.title}
+              />
             </article>
           ))}
         </section>
       </main>
+
       <Footer />
     </div>
   );

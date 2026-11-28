@@ -10,7 +10,7 @@ export default function PhotographyPage() {
       <SiteHeader />
       <main className="legal__main">
         <h1 className="legal__title">Event Photography &amp; Recording Notice</h1>
-        <p className="legal__updated">Last updated: [DATE]</p>
+        <p className="legal__updated">Last updated: 28 November 2026</p>
 
         <div className="legal__body">
           <p>Hanken Entrepreneurship Society ("Hanken ES") may take photographs, video recordings, and other media during events, workshops, networking sessions, competitions, and other activities organized or co-organized by Hanken ES.</p>

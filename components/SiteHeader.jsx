@@ -37,6 +37,14 @@ export default function SiteHeader({ home = false, transparent = false }) {
           </div>
         </details>
 
+        <Link
+          href="/corporate-entrepreneurship"
+          className="site-header-v2__nav-link hover-grow site-header-v2__nav-link--two-line"
+        >
+          <span>CORPORATE</span>
+          <span>ENTREPRENEURSHIP</span>
+        </Link>
+
         <Link href="/get-involved" className="site-header-v2__nav-link hover-grow">
           GET INVOLVED
         </Link>
