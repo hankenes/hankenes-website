@@ -10,7 +10,7 @@ export default function EventPrivacyPage() {
       <SiteHeader />
       <main className="legal__main">
         <h1 className="legal__title">Event Registration Privacy Notice</h1>
-        <p className="legal__updated">Last updated: [DATE]</p>
+        <p className="legal__updated">Last updated: 28 November 2026</p>
 
         <div className="legal__body">
           <p>By registering for a Hanken ES event, you acknowledge that Hanken ES will process your personal information for event administration purposes.</p>

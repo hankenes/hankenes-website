@@ -55,6 +55,7 @@
   color: #fff;
   font-size: 18px;
   font-weight: 600;
+  line-height: 1.4;
   letter-spacing: 0.06em;
   text-align: center;
 }
@@ -80,5 +81,9 @@
 
   .assembly-2027__closing {
     margin-top: 36px;
+  }
+
+  .assembly-2027__closing .assembly-2026__note {
+    line-height: 1.4;
   }
 }

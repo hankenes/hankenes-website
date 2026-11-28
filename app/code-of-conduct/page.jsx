@@ -10,7 +10,7 @@ export default function CodeOfConductPage() {
       <SiteHeader />
       <main className="legal__main">
         <h1 className="legal__title">Code of Conduct</h1>
-        <p className="legal__updated">Last updated: [DATE]</p>
+        <p className="legal__updated">Last updated: 28 November 2026</p>
 
         <div className="legal__body">
           <h2>Purpose</h2>

@@ -1,3 +1,4 @@
+
 import SiteHeader from '../../components/SiteHeader';
 import Footer from '../../components/Footer';
 import '../legal.css';
@@ -10,7 +11,7 @@ export default function CookiePolicyPage() {
       <SiteHeader />
       <main className="legal__main">
         <h1 className="legal__title">Cookie Policy</h1>
-        <p className="legal__updated">Last updated: [DATE]</p>
+        <p className="legal__updated">Last updated: 28 November 2026</p>
 
         <div className="legal__body">
           <h2>1. What Are Cookies?</h2>

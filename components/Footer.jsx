@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import './Footer.css';
 
@@ -5,9 +6,11 @@ export default function Footer({ transparent = false }) {
   return (
     <footer className={`site-footer${transparent ? ' site-footer--transparent' : ''}`}>
       <div className="site-footer__row">
+
         {/* LEFT — community links */}
         <div className="site-footer__col site-footer__col--left">
           <p className="site-footer__heading">COMMUNITY</p>
+
           <nav className="site-footer__links" aria-label="Community links">
             <a className="site-footer__link hover-grow" href="https://chat.whatsapp.com/L18UQlZz8SxGjlIcU5t7al" target="_blank" rel="noreferrer">WHATSAPP</a>
             <a className="site-footer__link hover-grow" href="https://www.instagram.com/hanken.es/" target="_blank" rel="noreferrer">INSTAGRAM</a>
@@ -18,6 +21,7 @@ export default function Footer({ transparent = false }) {
         {/* MIDDLE — information & policies */}
         <div className="site-footer__col site-footer__col--mid">
           <p className="site-footer__heading">INFORMATION &amp; POLICIES</p>
+
           <nav className="site-footer__links" aria-label="Information and policies">
             <Link className="site-footer__link hover-grow" href="/privacy-policy">PRIVACY POLICY</Link>
             <Link className="site-footer__link hover-grow" href="/cookie-policy">COOKIE POLICY</Link>
@@ -31,19 +35,32 @@ export default function Footer({ transparent = false }) {
         {/* RIGHT — contact + address */}
         <div className="site-footer__col site-footer__col--right">
           <p className="site-footer__heading">CONTACT US</p>
+
           <div className="site-footer__contact">
-            <a className="site-footer__email hover-grow" href="mailto:info@hankenes.org">INFO@HANKENES.ORG</a>
-            <p className="site-footer__email site-footer__email--muted">FIRSTNAME.LASTNAME [AT] HANKENES.ORG</p>
+            <a
+              className="site-footer__email hover-grow"
+              href="mailto:info@hankenes.org"
+            >
+              info@hankenes.org
+            </a>
+
+            <p className="site-footer__email site-footer__email--muted">
+              FIRSTNAME.LASTNAME @ HANKENES.ORG
+            </p>
           </div>
+
           <p className="site-footer__address">
             ARKADIAGATAN 22 CO // HANKEN BUSINESS LAB
           </p>
         </div>
+
       </div>
 
-      {/* BOTTOM BAR — copyright set apart */}
+      {/* BOTTOM BAR — copyright */}
       <div className="site-footer__bottom">
-        <p className="site-footer__copy">2026 &reg; HANKEN ENTREPRENEURSHIP SOCIETY RF</p>
+        <p className="site-footer__copy">
+          2026 &reg; HANKEN ENTREPRENEURSHIP SOCIETY RF
+        </p>
       </div>
     </footer>
   );
